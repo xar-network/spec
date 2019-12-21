@@ -1,4 +1,4 @@
-## Usage
+## Auction
 
 ```go
 const (

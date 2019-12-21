@@ -8,75 +8,39 @@ XAR Network’s public chain is a permissionless decentralized network with a fo
 
 XAR Network's public chain allows you to deposit any supported digital asset, collateralize it, mint Collateralized Stable Currency Tokens (CSCTs) based on this collateral, and then use these CSCTs to stake and earn rewards. All the while maintaining ownership of your underlying collateralized asset. Staking CSDT allows you to receive rewards from the fees pool, proportional to your share of the total CSDT stakes in the network. Your rewards are paid in a stable currency token, such as CSDT (collateralized stable dollar token), not in an inflationary token as in some other networks.
 
-
-### 
-
-
-[TOC]
-
-
-
 ## 
 
-
 ## Project Overview
-
 
 ### **Project Name**
 
 Xar Network
 
-
 ### **Coin Name**
 
 CSDT (Collateralized Stable Debt Tokens)
-
 
 ### **Official website**
 
 [Xar Network](https://xar.network/)
 
-
 ### 
 **Elevator Pitch**
-
-
 
 *   Non-Inflationary, Stable, Sustainable Proof Of Stake
 *   Consolidated liquidity across DeFi offerings
 *   Decentralized, Stable, Unbiased currency that offers stable rewards
 
-
-
-*   
 The framework for Cosmos and Fantom-based decentralized finance.
 
 ## Problem Statement
 
-
-
-*   
-Staking rewards vs DeFi liquidity of assets
-
-
-*   
-Inflationary tokens used as rewards for staking
-
-
-*   
-Non stable rewards, impacting Opex planning
-
-
-*   
-Non linearly scalable on-chain security via staking
-
-
-*   
-No shared fees between DeFi offerings
-
-
-*   
-No optimized liquidity provider between DeFi offerings
+*   Staking rewards vs DeFi liquidity of assets
+*   Inflationary tokens used as rewards for staking
+*   Non stable rewards, impacting Opex planning
+*   Non linearly scalable on-chain security via staking
+*   No shared fees between DeFi offerings
+*   No optimized liquidity provider between DeFi offerings
 
 ### **Inflationary Staking**
 
@@ -118,8 +82,6 @@ If collateral was shared across all DeFi solutions, then fees could be consolida
 ## Solution
 
 To circumvent this, we designed a system that has;
-
-
 
 *   Stable Rewards
 *   Multi asset support
@@ -164,8 +126,6 @@ All DeFi solutions are built into the protocol as native layer 1 solutions. They
 Stakers provide collateral to a shared liquidity pool via staking their collateral. The native layer 1 DeFi modules; coinswap, DEX, synthetic, and loan modules borrow from this consolidated liquidity pool. The pool receives consolidated rewards from all modules. This optimized collateral provides lower fees and interest rates for borrowers.
 
 All fees are shared to this liquidity pool, fees are generated as follows;
-
-
 
 *   Transaction fee, 0.025ucsdt on every transaction
 *   Governance proposal fee, fixed fee per proposal
@@ -221,8 +181,6 @@ The following is a high level description of the base instruments made available
 
 Here is a brief overview of Xar modules. We will later cover these modules in more detail.
 
-
-
 *   auth – basic account management and account queries
 *   bank – basic transfer management
 *   coinswap – liquidity pool based swaps
@@ -244,8 +202,6 @@ The above are the raw instruments required to build a variety of traditional fin
 ### Traditional Use Cases
 
 Coins for Open Finance
-
-
 
 *   Increases the Bank’s FIAT Deposits (Liquidity) by attracting customer funds
     *   Offer customers’ new utility on funds (Transacting)

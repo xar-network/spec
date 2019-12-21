@@ -1,4 +1,4 @@
-# types
+# denominations
 --
     import "github.com/xar-network/xar-network/x/denominations/internal/types"
 

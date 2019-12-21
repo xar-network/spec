@@ -464,7 +464,7 @@ All the fees are distributed to CSDT stakers proportional to their CSDT stake.
 
 ### Projected Staking Rewards
 
-Assumptions
+Data Analytics on 21/12/2019
 
 *   IDEX trading volume (24hrs) $300,000
 *   IDEX fees 0.2% taker, 0.1% maker

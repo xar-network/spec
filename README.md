@@ -448,46 +448,18 @@ CSSR allows you to take any supported asset, collateralize it, mint Collateraliz
 The system has quite a few fees, so we will go through the straight forward ones first (all fees are controlled via on-chain parameter governance);
 
 
-
-*   
-Rebalancing fee (30% of debt raised), rebalancing fees occur when a CSDT position is liquidated because it is under collateralized. The system takes a percentage of the CSDT raised on the auction and deposits it into the distribution module.
-
-
-*   
-Stability fee (2% configured via governance), the stability fee is the base cost to borrow or mint new assets in the system, this percentage is a yearly amount
-
-
+*   Rebalancing fee (30% of debt raised), rebalancing fees occur when a CSDT position is liquidated because it is under collateralized. The system takes a percentage of the CSDT raised on the auction and deposits it into the distribution module.
+*   Stability fee (2% configured via governance), the stability fee is the base cost to borrow or mint new assets in the system, this percentage is a yearly amount
     *   Minting ucsdt (flat 2%)
     *   Borrowing collateral (Explained below)
+*   Interest fee (Utilization ratio of market * 20%, explained below)
+*   Transaction fees (0.0025ucsdt per transaction)
+*   Slashing (0.0001% for downtime, 5% for double signing)
+*   Governance fees for proposals (fixed fees)
+*   DEX trading fees (0.0025% Maker/Taker)
+*   Coinswap fee (~0.0025% - 3% Maker/Taker)
+*   Synthetic fee (~0.0025% - 3% Maker/Taker)
 
-
-
-*   
-Interest fee (Utilization ratio of market * 20%, explained below)
-
-
-*   
-Transaction fees (0.0025ucsdt per transaction)
-
-
-*   
-Slashing (0.0001% for downtime, 5% for double signing)
-
-
-*   
-Governance fees for proposals (fixed fees)
-
-
-*   
-DEX trading fees (0.0025% Maker/Taker)
-
-
-*   
-Coinswap fee (~0.0025% - 3% Maker/Taker)
-
-
-*   
-Synthetic fee (~0.0025% - 3% Maker/Taker)
 All the fees are distributed to CSDT stakers proportional to their CSDT stake.
 
 

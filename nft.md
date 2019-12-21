@@ -1,4 +1,4 @@
-# types
+# nft
 --
     import "github.com/xar-network/xar-network/x/nft/internal/types"
 

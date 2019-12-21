@@ -1,4 +1,4 @@
-# types
+# issue
 --
     import "github.com/xar-network/xar-network/x/issue/internal/types"
 

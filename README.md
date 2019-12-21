@@ -460,7 +460,7 @@ The system has quite a few fees, so we will go through the straight forward ones
 
 All the fees are distributed to CSDT stakers proportional to their CSDT stake.
 
-### Projected Staking Rewards
+### Simulated Staking Rewards
 
 Data Analytics on 21/12/2019
 

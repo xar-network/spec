@@ -1,4 +1,4 @@
-# types
+# order
 --
     import "github.com/xar-network/xar-network/x/order/types"
 

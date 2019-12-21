@@ -1,4 +1,4 @@
-# types
+# csdt
 --
     import "github.com/xar-network/xar-network/x/csdt/internal/types"
 

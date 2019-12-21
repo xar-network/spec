@@ -1,6 +1,6 @@
-# types
+# coinswap
 --
-    import "github.com/xar-network/xar-network/x/uniswap/internal/types"
+    import "github.com/xar-network/xar-network/x/coinswap/internal/types"
 
 
 ## Usage

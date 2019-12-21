@@ -1,4 +1,4 @@
-# types
+# record
 --
     import "github.com/xar-network/xar-network/x/record/internal/types"
 

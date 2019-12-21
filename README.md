@@ -462,6 +462,43 @@ The system has quite a few fees, so we will go through the straight forward ones
 
 All the fees are distributed to CSDT stakers proportional to their CSDT stake.
 
+### Projected Staking Rewards
+
+Assumptions
+
+*   IDEX trading volume (24hrs) $300,000
+*   IDEX fees 0.2% taker, 0.1% maker
+*   IDEX 50% maker, 50% taker
+*   Uniswap volume (24hrs) $1,531,500
+*   Uniswap fees (0.3%)
+*   Synthetix Exchange Volume (24hrs) $8,652,251
+*   Synthetix fees (0.3%)
+*   Compound total market size $121,134,000
+*   Compound yearly supply APR 10.59%
+
+IDEX daily taker fees: $300.00
+
+IDEX daily maker fees: $150.00
+
+Uniswap daily fees: $4,594.50
+
+Synthetix daily fees: $25,956.75
+
+Compound daily fees: $34,145.45
+
+Total daily fees: $65,146.70
+
+Monthly fees: $1,981,547.62
+
+Assuming 1% of above liquidity;
+
+Assets Staked: $1,211,340.00
+
+Monthly fees: $19,815.47
+
+Yearly fees: $237,785.64
+
+Yearly APR: 19.62%
 
 ## 
 **Token Economics**

@@ -477,28 +477,20 @@ Assumptions
 *   Compound yearly supply APR 10.59%
 
 IDEX daily taker fees: $300.00
-
 IDEX daily maker fees: $150.00
-
 Uniswap daily fees: $4,594.50
-
 Synthetix daily fees: $25,956.75
-
-Compound daily fees: $34,145.45
+Compound daily fees: $34,145.45  
 
 Total daily fees: $65,146.70
+Monthly fees: $1,981,547.62  
 
-Monthly fees: $1,981,547.62
-
-Assuming 1% of above liquidity;
+Assuming 1% of above liquidity;  
 
 Assets Staked: $1,211,340.00
-
 Monthly fees: $19,815.47
-
 Yearly fees: $237,785.64
-
-Yearly APR: 19.62%
+Yearly APR: 19.62%  
 
 ## 
 **Token Economics**

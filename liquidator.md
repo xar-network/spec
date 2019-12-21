@@ -1,28 +1,9 @@
-# types
+# liquidator
 --
     import "github.com/xar-network/xar-network/x/liquidator/internal/types"
 
 Package Liquidator settles bad debt from undercollateralized CSDTs by seizing
 them and raising funds through auctions.
-
-### Notes
-
-     - Missing the debt queue thing from Vow
-     - seized collateral and csdt are stored in the module account, but debt (aka Sin) is stored in keeper
-     - The boundary between the liquidator and the csdt modules is messy.
-    	- The CSDT type is used in liquidator
-    	- csdt knows about seizing
-    	- seizing of a CSDT is split across each module
-    	- recording of debt is split across modules
-    	- liquidator needs get access to stable and gov denoms from the csdt module
-
-### TODO
-
-    - Is returning unsold collateral to the CSDT owner rather than the CSDT a problem? It could prevent the CSDT from becoming safe again.
-    - Add some kind of more complete test
-    - Add constants for the module and route names
-    - tags
-    - custom error types, codespace
 
 ## Usage
 

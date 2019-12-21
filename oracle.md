@@ -1,4 +1,4 @@
-# types
+# oracle
 --
     import "github.com/xar-network/xar-network/x/oracle/internal/types"
 

@@ -1,4 +1,4 @@
-# types
+# synthetic
 --
     import "github.com/xar-network/xar-network/x/synthetic/internal/types"
 

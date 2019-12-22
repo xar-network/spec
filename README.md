@@ -1477,20 +1477,6 @@ You can mint, via the [CLI]( https://xar-network.github.io/xar-network/installat
 [Xar Wallet](https://wallet.xar.network) has a calculator
 #### Q: How much is currently staked?
 [Xar Wallet](https://wallet.xar.network) shows the current staked data, you can also view validators on [Xar Explorer](https://explorer.xar.network)
-## User Auctions
-#### [Tutorial coming soon]( https://godoc.org/github.com/xar-network/xar-network/x/auction/client/cli)
-## User Trading
-#### [Tutorial coming soon]( https://godoc.org/github.com/xar-network/xar-network/x/order/client/cli)
-## User Lending
-#### [Functionality coming soon]( https://godoc.org/github.com/xar-network/xar-network/x/csdt/client/cli)
-## User Liquidity pools
-#### Functionality coming soon
-## User Issuing tokens
-#### [Tutorial coming soon]( https://godoc.org/github.com/xar-network/xar-network/x/issue/client/cli)
-## User Issuing NFTs
-#### [Tutorial coming soon]( https://godoc.org/github.com/xar-network/xar-network/x/nft/client/cli)
-## User Record Proofs
-#### [Tutorial coming soon]( https://godoc.org/github.com/xar-network/xar-network/x/record/client/cli)
 # Developers
 #### Q: Where can I find general resources?
 [Xar Resources]( https://xar-network.github.io/awesome/)
@@ -1499,24 +1485,6 @@ You can mint, via the [CLI]( https://xar-network.github.io/xar-network/installat
 [Installing the Xar application]( https://xar-network.github.io/xar-network/installation.html)
 #### Q: How do I run a testnet?
 [Setup your own Xar testnet]( https://xar-network.github.io/xar-network/deploy-testnet.html)
-#### Q: Where can I find documentation on the Auction Module?
-[Auction Module]( https://godoc.org/github.com/xar-network/xar-network/x/auction)
-#### Q: Where can I find documentation on the CSDT Module?
-[CSDT Module]( https://godoc.org/github.com/xar-network/xar-network/x/csdt)
-#### Q: Where can I find documentation on the Issue Module?
-[Issue Module]( https://godoc.org/github.com/xar-network/xar-network/x/issue)
-#### Q: Where can I find documentation on the Liquidator Module?
-[Liquidator Module]( https://godoc.org/github.com/xar-network/xar-network/x/liquidator)
-#### Q: Where can I find documentation on the Market Module?
-[Market Module]( https://godoc.org/github.com/xar-network/xar-network/x/market)
-#### Q: Where can I find documentation on the NFT Module?
-[NFT Module]( https://godoc.org/github.com/xar-network/xar-network/x/nft)
-#### Q: Where can I find documentation on the Oracle Module?
-[Oracle Module]( https://godoc.org/github.com/xar-network/xar-network/x/oracle)
-#### Q: Where can I find documentation on the Order Module?
-[Order Module]( https://godoc.org/github.com/xar-network/xar-network/x/order)
-#### Q: Where can I find documentation on the Record Module?
-[Record Module]( https://godoc.org/github.com/xar-network/xar-network/x/record)
 ## Developer JavaScript / NodeJS
 #### Q: How can I interact with the chain?
 [JavaScript-SDK]( https://www.npmjs.com/package/@xar-network/javascript-sdk)

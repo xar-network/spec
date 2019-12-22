@@ -116,13 +116,13 @@ XAR Network's public chain allows you to deposit any supported digital asset, co
     + [Q: What should I know about security as a validator?](#q--what-should-i-know-about-security-as-a-validator-)
 - [General](#general)
 - [Publications](#publications)
-    + [The Economics of Smart Contracts](#-the-economics-of-smart-contracts--https---arxivorg-abs-191011143-)
-    + [Fast Stochastic Peer Selection in Proof-of-Stake Protocols](#-fast-stochastic-peer-selection-in-proof-of-stake-protocols--https---arxivorg-abs-191104629-)
-    + [StairDag: Cross-DAG Validation For Scalable BFT Consensus](#-stairdag--cross-dag-validation-for-scalable-bft-consensus--https---arxivorg-abs-190811810-)
-    + [StakeDag: Stake-based Consensus For Scalable Trustless Systems](#-stakedag--stake-based-consensus-for-scalable-trustless-systems--https---arxivorg-abs-190703655-)
-    + [ONLAY: Online Layering for scalable asynchronous BFT system](#-onlay--online-layering-for-scalable-asynchronous-bft-system--https---arxivorg-abs-190504867-)
-    + [Fantom: A scalable framework for asynchronous distributed systems](#-fantom--a-scalable-framework-for-asynchronous-distributed-systems--https---arxivorg-abs-181010360-)
-    + [OPERA: Reasoning about continuous common knowledge in asynchronous distributed systems](#-opera--reasoning-about-continuous-common-knowledge-in-asynchronous-distributed-systems--https---arxivorg-abs-181002186-)
+    + [The Economics of Smart Contracts](#-the-economics-of-smart-contracts)
+    + [Fast Stochastic Peer Selection in Proof-of-Stake Protocols](#-fast-stochastic-peer-selection-in-proof-of-stake-protocols)
+    + [StairDag: Cross-DAG Validation For Scalable BFT Consensus](#-stairdag--cross-dag-validation-for-scalable-bft-consensus)
+    + [StakeDag: Stake-based Consensus For Scalable Trustless Systems](#-stakedag--stake-based-consensus-for-scalable-trustless-systems)
+    + [ONLAY: Online Layering for scalable asynchronous BFT system](#-onlay--online-layering-for-scalable-asynchronous-bft-system)
+    + [Fantom: A scalable framework for asynchronous distributed systems](#-fantom--a-scalable-framework-for-asynchronous-distributed-systems)
+    + [OPERA: Reasoning about continuous common knowledge in asynchronous distributed systems](#-opera--reasoning-about-continuous-common-knowledge-in-asynchronous-distributed-systems)
 
 ## Project Overview
 

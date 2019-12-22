@@ -630,19 +630,22 @@ The following contains full technical specifications, below this will be a user 
 *   [Xar Network - CSDT](https://github.com/xar-network/spec/blob/master/csdt.md)
 *   [Xar Network - Denominations](https://github.com/xar-network/spec/blob/master/denominations.md)
 *   [Xar Network - Issue](https://github.com/xar-network/spec/blob/master/issue.md)
-*   [Xar Network - liquidator](https://github.com/xar-network/spec/blob/master/liquidator.md)
+*   [Xar Network - Liquidator](https://github.com/xar-network/spec/blob/master/liquidator.md)
 *   [Xar Network - Market](https://github.com/xar-network/spec/blob/master/market.md)
 *   [Xar Network - NFT](https://github.com/xar-network/spec/blob/master/nft.md)
 *   [Xar Network - Oracle](https://github.com/xar-network/spec/blob/master/oracle.md)
 *   [Xar Network - Order](https://github.com/xar-network/spec/blob/master/order.md)
 *   [Xar Network - Record](https://github.com/xar-network/spec/blob/master/record.md)
 *   [Xar Network - Coinswap](https://github.com/xar-network/spec/blob/master/coinswap.md)
-*   [Xar Network - Synthetic](https://github.com/xar-network/spec/blob/master/synthetic.md)
+*   [Xar Network - Synthetic](https://github.com/xar-network/spec/blob/master/synthetic.md)  
+
 *   [Xar Network - Message Types](https://github.com/xar-network/spec/blob/master/types.md)
 *   [Xar Network - JSON format](https://github.com/xar-network/spec/blob/master/openapi.md)
 
 
 ### Module Auction
+
+[Auction Full Specification](https://github.com/xar-network/spec/blob/master/auction.md)
 
 Generic module for creating auctions and allowing users to place bids until a timeout is reached
 
@@ -658,6 +661,8 @@ Generic module for creating auctions and allowing users to place bids until a ti
 *   CSDT rebalancing auctions
 
 ### Module Lending / CSDT
+
+[CSDT Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
 
 Collateral lending module based on borrowing from liquidity pools and paying liquidity providers with interest.
 
@@ -678,6 +683,8 @@ DistributeReward distributes the given reward between all the funders
 *   Decentralized collateralized lending, required for decentralized shorting solutions
 
 ### Module CSDT / Decentralized Stable Tokens
+
+[CSDT Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
 
 Collateralized Stable Debt Tokens (CSDT) that are asset pegged (asset is USD, but can any other asset, BNB for example).
 
@@ -722,6 +729,8 @@ Users can create lock boxes to deposit denoms into, these boxes have set conditi
 
 ### Module Issue
 
+[Issue Full Specification](https://github.com/xar-network/spec/blob/master/issue.md)
+
 Allows for the creation of ERC20 standard mapped token issuance with fixed (governance controlled) creation and management fees.
 
 CreateToken allows the creation of a token, the denom itself is not reserved for the symbol, but instead an incrementing ID prefixed, for example bnb128e12c while the metadata preserves the symbol, for example FTM
@@ -760,6 +769,8 @@ Global parameters (set via governance) are as follows;
 
 ### Module Liquidator
 
+[Liquidator Full Specification](https://github.com/xar-network/spec/blob/master/liquidator.md)
+
 The liquidator module settles bad debt from undercollateralized CSDT’s by seizing them and raising funds through auctions.
 
 *   SeizeAndStartCollateralAuction pulls collateral out of a CSDT and sells it in an auction for CSDT. Excess collateral is goes back to the contract
@@ -769,6 +780,8 @@ The liquidator module settles bad debt from undercollateralized CSDT’s by seiz
 Global parameters allows governance to set max auction debt sizes for removed collateral (to ensure smaller lots for bidding)
 
 ### Module Market
+
+[Market Full Specification](https://github.com/xar-network/spec/blob/master/market.md)
 
 The market module creates new markets on the DEX, and allows the Order module to trade against.
 
@@ -782,6 +795,8 @@ Global parameters via governance set the acceptable markets for DEX trading
 
 ### Module Order
 
+[Oracle Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
+
 Order module allows user to place BID and ASKS on the Market module
 
 *   PlaceBid places a BID or ASK in the given market ID
@@ -794,6 +809,8 @@ Order module allows user to place BID and ASKS on the Market module
 
 ### Module NFT
 
+[NFT Full Specification](https://github.com/xar-network/spec/blob/master/nft.md)
+
 Allows for the creation of Non Fungible Token collections and Non Fungible Tokens (NFTs)
 
 MintNFT creates a new NFT object with a collection and owner(s)
@@ -805,6 +822,8 @@ MintNFT creates a new NFT object with a collection and owner(s)
 
 ### Module Oracle
 
+[Oracle Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
+
 Allows a group of white-listed oracles to post price information of specific assets that are tracked by the protocol.
 
 *   AddOracle allows governance to add additional white-listed oracles
@@ -814,6 +833,8 @@ Allows a group of white-listed oracles to post price information of specific ass
 After each block all submitted prices are aggregated and a median (weighted by stake) value is created as the current price.
 
 ### Module Record (Proof of Existence)
+
+[Record Full Specification](https://github.com/xar-network/spec/blob/master/record.md)
 
 Allows the creation of proof as an immutable record. 
 
@@ -828,6 +849,8 @@ Allows the creation of proof as an immutable record.
 
 ### Module Coinswap
 
+[Coinswap Full Specification](https://github.com/xar-network/spec/blob/master/coinswap.md)
+
 Generic system coinswap protocol. Users can provide liquidity and set pool based swap ratios.
 
 *   AddLiquidity allows a user to add liquidity to a pool. User can specify the token they wish to swap for.
@@ -838,6 +861,8 @@ This allows swaps based on liquidity ratio in the pool, so if the pool is 100:1 
 Supported swap markets are controlled via governance.
 
 ### Module Synthetic
+
+[Synthetic Full Specification](https://github.com/xar-network/spec/blob/master/synthetic.md)
 
 Allows the minting, selling, and buying of synthetic assets. Supported assets are controlled via governance.
 

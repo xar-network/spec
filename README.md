@@ -180,7 +180,6 @@ Each new DeFi solution competes with each other over fees, and collateral. Incre
 
 If collateral was shared across all DeFi solutions, then fees could be consolidated. This would lead to greater fees for the collateral provider, and lower rates for the borrower (to offset the current collateral & fee war)
 
-
 ## Solution
 
 To circumvent this, we designed a system that has;
@@ -245,7 +244,6 @@ This is why the chain can provide much higher staking rewards, and much lower bo
 
 Shared liquidity (cheaper rates) and consolidated fees (higher rewards)
 
-
 ### Maintaining CSDT value (Rebalancing explained)
 
 Let’s say you create a CSDT with 150% collateral of FTM and at a price of $0.0121. Your total collateral is $181 (15,000 FTM). You withdraw $100. Your “liquidation” price is $0.01.
@@ -273,9 +271,7 @@ Non inflationary, stable rewards
 
 For better Opex and reward management from a coin that won't devalue because of Inflationary supply
 
-
 ## Project Details
-
 
 ### Feature Set
 
@@ -315,8 +311,6 @@ Coins for Open Finance
 
 Tokenised Markets for Investment Banks
 
-
-
 *   Primary Debt & Equity Markets
     *   Issuance, Book Building, Auction, Interest Payment, and Term Renegotiations
 *   Secondary Debt & Equity Spot Markets
@@ -331,8 +325,6 @@ Tokenised Markets for Investment Banks
 
 Digital Currency for Central Banks
 
-
-
 *   Net Interbank Settlements
 *   Treasury Notes, Bills and Bonds Management
 *   Foreign Stable Token Exchange
@@ -341,8 +333,6 @@ Digital Currency for Central Banks
     *   Remittance of Social Grants
 
 Managing Debentures Issuing
-
-
 
 *   Debt tokenisation
 *   Debt modelling through capital and interest tokens
@@ -362,23 +352,16 @@ Managing Debentures Issuing
 
 *Governance dependent
 
-
 ### Target Demographic (High Level)
-
-
 
 *   Retail DeFi investors
 *   Central and corporate banks on the FinTech side
 
 ### Long term vision
 
-
 Grow on-chain AUM to ~$100MM, accomplishing this via competitive interest rates and higher APR yield. Stakers provide liquidity and security. We are also working with multiple Central and Corporate bank projects in 3 different geographic regions.
 
-
 ### Relevant milestones in the past and upcoming 24 months
-
-
 
 *   Feb 2019 Signed agreement with 1st Corporate Bank for application of [DLT technologies](https://www.blog.xar.network/the-case-for-bank-stable-coins/)
 *   Apr 2019 Partnership with Fantom Foundation as technology partner
@@ -401,9 +384,7 @@ Grow on-chain AUM to ~$100MM, accomplishing this via competitive interest rates 
 
 ### Necessity of a new native coin
 
-
 Premined tokens can't be used as they break the economics of stable, sustainable, non-inflationary staking. This rules out all current existing tokens. But we also did not want to do an ICO, or raise any funds, and so we incorporated popular and existing cryptocurrencies to provide them additional value and utility.
-
 
 ### Project Competitors
 
@@ -415,33 +396,26 @@ Non-crypto: R3, Hyperledger
 
 Our suite has been built from the last 12 month journey we have had with multiple corporate and 1 central bank. The toolset is built around usability and ease-of-use, with existing solutions like R3, and Hyperleder, these tools and ecosystem components must still be built, we provide them pre-packaged, with regulatory compliance, and even licensing for CSDT as an investment vehicle.
 
-
 ## Product
-
 
 ### Development status
 
 Mainnet was launched in Nov 2019
-
 
 ### Relevant product links
 
 [Xar Explorer](https://explorer.xar.network/)  
 [Xar Wallet](https://wallet.xar.network/)  
 
-
 ### Open Source License
 
 Apache-2.0
-
 
 ### Github Repo link
 
 [https://github.com/xar-network](https://github.com/xar-network)
 
-
 ## Features of the coin (CSDT)
-
 
 ### CSDT use cases
 
@@ -505,13 +479,11 @@ The most well known is SAI/DAI by MakerDAO, the concept is as follows;
 
 Users provide collateral (~stake), that collateral is worth an amount of USD (if my collateral is 1 ETH and 1 ETH is worth $200, then my collateral (read stake) is $200). For providing this stake you can mint SAI up to the value of the collateralization ratio. If ETH is 100%, then you can mint $200 worth of SAI
 
-
 #### Liquidity based lending
 
 The most well known protocol is Compound, the concept is as follows;
 
 Users provide collateral (~stake), that collateral is worth an amount of USD (if my collateral is 1 ETH and 1 ETH is worth $200, then my collateral (read stake) is $200 - Yes, this is the exact same sentence as above). For providing this stake, I can borrow other assets that other users staked. I would like to borrow BTC, and I can borrow 0.02 BTC if BTC was $10,000 and my collateral ratio was 100%
-
 
 #### Collateral Sustainable Stable Rewards
 
@@ -569,34 +541,57 @@ Yearly fees: $237,785.64
 
 ## Token Economics
 
-
 ### Current Market capitalization (at the time of writing)
 
 [$541,909.91](https://wallet.xar.network/)
-
 
 ### Total coin supply
 
 Debt limit of $25,000,000
 
-
 ### Listed Exchanges
 
 None
 
+### Bootstrapping
+
+As proposed the system will gain equilibrium when it fulfills two requirements;
+
+* On-chain assets (collateral)
+* On-chain volume (DeFi modules)
+
+It is unlikely that these will be sufficient for the first year after the launch of the chain, for that purpose the distribution modules can act as a Special Purpose Vehicle (SPV) that accepts donations and provides these donations via a bonded yield ratio. This ratio is currently set at a minimum of 6% and a maximum of 30%. Should there be enough donation rewards or community rewards, these will be distributed to offset the initial lack of liquidity and volume.
+
+Donations are simply transferred to the distribution address and the normal delegation distribution takes care of the validator and delegator distribution ratio.
+
+The ratio of yield is dependent on the target bonded percentage. Currently set to 67%. If the amount of CSDT staked is less than 67% the yield number will increase to the maximum of 30%, should it be greater than 67% this number will decrease to 6%.
+
+The first years interest will be donated by Xar to a maximum of $1,500,000.00
+
+For this reason, specific debt limits have been chosen related to each proposed collateral. With the current debt limits set to $500,000.00 per asset.
+
+### Slashing
+
+Slashing are triggered by negative behavior events, there are two primary events
+
+* Downtime
+* Double-signing
+
+If a validator fails to sign at least 500 blocks in a 10,000 block period, they will be slashed and jailed. The slashing penalty is 0.1%.
+
+If a validator double signs a transaction (double spend) they will be slashed and jailed. The double sign penalty is 5%.
+
+These penalties are applied to the full validator stake, including delegations.
 
 ## Wallet
-
 
 ### ERC20
 
 No
 
-
 ### Blockchain Explorer
 
 *   [Xar Explorer](https://explorer.xar.network/)
-
 
 ### Web Wallet
 
@@ -637,15 +632,13 @@ The following contains full technical specifications, below this will be a user 
 *   [Xar Network - Order](https://github.com/xar-network/spec/blob/master/order.md)
 *   [Xar Network - Record](https://github.com/xar-network/spec/blob/master/record.md)
 *   [Xar Network - Coinswap](https://github.com/xar-network/spec/blob/master/coinswap.md)
-*   [Xar Network - Synthetic](https://github.com/xar-network/spec/blob/master/synthetic.md)  
-
+*   [Xar Network - Synthetic](https://github.com/xar-network/spec/blob/master/synthetic.md)
 *   [Xar Network - Message Types](https://github.com/xar-network/spec/blob/master/types.md)
 *   [Xar Network - JSON format](https://github.com/xar-network/spec/blob/master/openapi.md)
 
-
 ### Module Auction
 
-[Auction Full Specification](https://github.com/xar-network/spec/blob/master/auction.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/auction.md)
 
 Generic module for creating auctions and allowing users to place bids until a timeout is reached
 
@@ -662,7 +655,7 @@ Generic module for creating auctions and allowing users to place bids until a ti
 
 ### Module Lending / CSDT
 
-[CSDT Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
 
 Collateral lending module based on borrowing from liquidity pools and paying liquidity providers with interest.
 
@@ -684,7 +677,7 @@ DistributeReward distributes the given reward between all the funders
 
 ### Module CSDT / Decentralized Stable Tokens
 
-[CSDT Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
 
 Collateralized Stable Debt Tokens (CSDT) that are asset pegged (asset is USD, but can any other asset, BNB for example).
 
@@ -729,7 +722,7 @@ Users can create lock boxes to deposit denoms into, these boxes have set conditi
 
 ### Module Issue
 
-[Issue Full Specification](https://github.com/xar-network/spec/blob/master/issue.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/issue.md)
 
 Allows for the creation of ERC20 standard mapped token issuance with fixed (governance controlled) creation and management fees.
 
@@ -769,7 +762,7 @@ Global parameters (set via governance) are as follows;
 
 ### Module Liquidator
 
-[Liquidator Full Specification](https://github.com/xar-network/spec/blob/master/liquidator.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/liquidator.md)
 
 The liquidator module settles bad debt from undercollateralized CSDT’s by seizing them and raising funds through auctions.
 
@@ -781,7 +774,7 @@ Global parameters allows governance to set max auction debt sizes for removed co
 
 ### Module Market
 
-[Market Full Specification](https://github.com/xar-network/spec/blob/master/market.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/market.md)
 
 The market module creates new markets on the DEX, and allows the Order module to trade against.
 
@@ -795,7 +788,7 @@ Global parameters via governance set the acceptable markets for DEX trading
 
 ### Module Order
 
-[Oracle Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
 
 Order module allows user to place BID and ASKS on the Market module
 
@@ -809,7 +802,7 @@ Order module allows user to place BID and ASKS on the Market module
 
 ### Module NFT
 
-[NFT Full Specification](https://github.com/xar-network/spec/blob/master/nft.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/nft.md)
 
 Allows for the creation of Non Fungible Token collections and Non Fungible Tokens (NFTs)
 
@@ -822,7 +815,7 @@ MintNFT creates a new NFT object with a collection and owner(s)
 
 ### Module Oracle
 
-[Oracle Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
 
 Allows a group of white-listed oracles to post price information of specific assets that are tracked by the protocol.
 
@@ -834,7 +827,7 @@ After each block all submitted prices are aggregated and a median (weighted by s
 
 ### Module Record (Proof of Existence)
 
-[Record Full Specification](https://github.com/xar-network/spec/blob/master/record.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/record.md)
 
 Allows the creation of proof as an immutable record. 
 
@@ -849,7 +842,7 @@ Allows the creation of proof as an immutable record.
 
 ### Module Coinswap
 
-[Coinswap Full Specification](https://github.com/xar-network/spec/blob/master/coinswap.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/coinswap.md)
 
 Generic system coinswap protocol. Users can provide liquidity and set pool based swap ratios.
 
@@ -862,7 +855,7 @@ Supported swap markets are controlled via governance.
 
 ### Module Synthetic
 
-[Synthetic Full Specification](https://github.com/xar-network/spec/blob/master/synthetic.md)
+[Full Specification](https://github.com/xar-network/spec/blob/master/synthetic.md)
 
 Allows the minting, selling, and buying of synthetic assets. Supported assets are controlled via governance.
 

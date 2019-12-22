@@ -1474,57 +1474,139 @@ Order 8 would match with order 5 for price 11.5 and quantity 32 and order 7 for 
 - [Developer Web / HTTPS](#developer-web--https)  
 - [Validators](#validators)  
 - [General](#general)  
+
 ## Users
+
 ### User Basics
+
 #### Q: How to create a wallet?
 Can currently be done via the [CLI]( https://xar-network.github.io/xar-network/installation.html), [javascript-sdk]( https://www.npmjs.com/package/@xar-network/javascript-sdk), [Xar Wallet](https://wallet.xar.network) (non custodial), or [Xar Portal](https://portal.xar.network) (custodial)
+
 #### Q: How to transfer funds from erc20/bep2 to Xar?
 [Fantom Bridge](https://bnbridge.exchange)
+
 #### Q: How to confirm that you received funds?
 [Xar Explorer](https://explorer.xar.network)
+
 ### User CSDT
+
 #### Q: What is CSDT and how does it work?
 [Xar Network staking explained](https://www.blog.xar.network/xar-network-staking-explained/)
+
 #### Q: What is ucsdt and uftm?
 USD and FTM 1:1,000,000 so 1FTM = 1,000,000uftm
+
 #### Q: How to mint ucsdt from uftm?
 You can mint, via the [CLI]( https://xar-network.github.io/xar-network/installation.html), [javascript-sdk]( https://www.npmjs.com/package/@xar-network/javascript-sdk), [Xar Wallet](https://wallet.xar.network), or [Xar Portal](https://portal.xar.network)
+
 #### Q: How to calculate how much CSDT I can create?
 [Xar Wallet](https://wallet.xar.network) has a calculator
+
 ### User Staking
+
 #### Q: How much staking rewards will I get?
 [Xar Wallet](https://wallet.xar.network) has a calculator
+
 #### Q: How much is currently staked?
 [Xar Wallet](https://wallet.xar.network) shows the current staked data, you can also view validators on [Xar Explorer](https://explorer.xar.network)
+
 ## Developers
+
 #### Q: Where can I find general resources?
 [Xar Resources]( https://xar-network.github.io/awesome/)
+
 ### Developer Blockchain
+
 #### Q: How do I install Xar?
 [Installing the Xar application]( https://xar-network.github.io/xar-network/installation.html)
+
 #### Q: How do I run a testnet?
 [Setup your own Xar testnet]( https://xar-network.github.io/xar-network/deploy-testnet.html)
+
 ### Developer JavaScript / NodeJS
+
 #### Q: How can I interact with the chain?
 [JavaScript-SDK]( https://www.npmjs.com/package/@xar-network/javascript-sdk)
+
 #### Q: Where can I find code samples?
 [JavaScript Examples]( https://xar-network.github.io/examples/)
+
 #### Q: What functions are currently supported?
 [Function coverage]( https://github.com/xar-network/javascript-sdk/blob/master/__tests__/client.test.js)
+
 ### Developer Web / HTTPS
+
 #### Q: Is there an API I can interact with?
 [Node REST API](https://node.xar.network)
+
 #### Q: Where can I find documentation in the API?
 [Xar Network REST API](https://docs.xar.network)
+
 ## Validators
+
 #### Q: How do I install a Xar node?
 [Installing the Xar Node]( https://xar-network.github.io/xar-network/)
+
 #### Q: How do I join the mainnet?
 [Joining the mainnet]( https://xar-network.github.io/xar-network/join-mainnet.html)
+
 #### Q: What should I know as a validator?
 [Validators Overview]( https://xar-network.github.io/xar-network/validators/overview.html)
+
 #### Q: What should I know about security as a validator?
 [Validators Security]( https://xar-network.github.io/xar-network/validators/security.html)
+
 ## General
-The [Xar blog](https://www.blog.xar.network/) is also a good source of information
+[Xar blog](https://www.blog.xar.network/)  
+[Xar FAQ](https://xar.network/faqs)  
+
+## Publications
+
+#### [The Economics of Smart Contracts](https://arxiv.org/abs/1910.11143)
+Oct 23, 2019
+
+Ethereum is a distributed blockchain that can execute smart contracts, which inter-communicate and perform transactions automatically. The execution of smart contracts is paid in the form of gas, which is a monetary unit used in the Ethereum blockchain. The Ethereum Virtual Machine (EVM) provides the metering capability for smart contract execution. Instruction costs vary depending on the instruction type and the approximate computational resources required to execute the instruction on the network. The cost of gas is adjusted using transaction fees to ensure adequate payment of the network. In this work, we highlight the "real" economics of smart contracts. We show that the actual costs of executing smart contracts are disproportionate to the computational costs and that this gap is continuously widening. We show that the gas cost-model of the underlying EVM instruction-set is wrongly modeled. Specifically, the computational cost for the SLOAD instruction increases with the length of the blockchain. Our proposed performance model estimates gas usage and execution time of a smart contract at a given block-height. The new gas-cost model incorporates the block-height to eliminate irregularities in the Ethereum gas calculations. Our findings are based on extensive experiments over the entire history of the EVM blockchain.
+
+#### [Fast Stochastic Peer Selection in Proof-of-Stake Protocols](https://arxiv.org/abs/1911.04629)
+Nov 12, 2019 
+
+The problem of peer selection, which randomly selects a peer from a set, is commonplace in Proof-of-Stake (PoS) protocols. In PoS, peers are chosen randomly with probability proportional to the amount of stake that they possess. This paper presents an approach that relates PoS peer selection to Roulette-wheel selection, which is frequently used in genetic and evolutionary algorithms or complex network modelling. In particular, we introduce the use of stochastic acceptance algorithm [6] for fast peer selection. The roulette-wheel selection algorithm [6] achieves O(1) complexity based on stochastic acceptance, whereas searching based algorithms may take O(N ) or O(logN ) complexity in a network of N peers.
+
+#### [StairDag: Cross-DAG Validation For Scalable BFT Consensus](https://arxiv.org/abs/1908.11810)
+Aug 29, 2019
+
+This paper introduces a new consensus protocol, so-called \emph{\stair}, for fast consensus in DAG-based trustless system. In \stair, we propose a new approach to creating local block DAG, namely \emph{x-DAG} (cross-DAG), on each node. \emph{\stair} protocol is based on our Proof-of-Stake StakeDag framework \cite{stakedag} that distinguishes participants into users and validators by their stake. Both users and validators can create and validate event blocks. Unlike StakeDag's DAG, x-DAG ensures that each new block has to have parent blocks from both Users and Validators to achieve more safety and liveness. Our protocol leverages a pool of validators to expose more validating power to new blocks for faster consensus in a leaderless asynchronous system. Further, our framework allows participants to join as observers / monitors, who can retrieve DAG for post-validation, but do not participate in onchain validation.
+
+#### [StakeDag: Stake-based Consensus For Scalable Trustless Systems](https://arxiv.org/abs/1907.03655)
+Jul 5, 2019
+
+Trustless systems, such as those blockchain enpowered, provide trust in the system regardless of the trust of its participants, who may be honest or malicious. Proof-of-stake (PoS) protocols and DAG-based approaches have emerged as a better alternative than the proof of work (PoW) for consensus. This paper introduces a new model, so-called \emph{\stakedag}, which aims for PoS consensus in a DAG-based trustless system. We address a general model of trustless system in which participants are distinguished by their stake or trust: users and validators. Users are normal participants with a no assumed trust and validators are high profile participants with an established trust. We then propose a new family of stake-based consensus protocols S, operating on the DAG as in the Lachesis protocol~\cite{lachesis01}. Specifically, we propose a stake-based protocol Sϕ that leverages participants' stake as validating weights to achieve more secure distributed systems with practical Byzantine fault tolerance (pBFT) in leaderless asynchronous Directed Acyclic Graph (DAG). We then present a general model of staking for asynchronous DAG-based distributed systems.
+
+#### [ONLAY: Online Layering for scalable asynchronous BFT system](https://arxiv.org/abs/1905.04867)
+May 13, 2019
+
+This paper presents a new framework, namely \emph{\onlay}, for scalable asynchronous distributed systems. In this framework, we propose a consensus protocol Lϕ, which is based on the Lachesis protocol~\cite{lachesis01}. At the core of Lϕ protocol, it introduces to use layering algorithm to achieve practical Byzantine fault tolerance (pBFT) in leaderless asynchronous Directed Acyclic Graph (DAG). Further, we present new online layering algorithms for the evolutionary DAGs across the nodes. Our new protocol achieves determistic scalable consensus in asynchronous pBFT by using assigned layers and asynchronous partially ordered sets with logical time ordering instead of blockchains. The partial ordering produced by Lϕ is flexible but consistent across the distributed system of nodes. We then present the formal model of our layering-based consensus. The model is generalized that can be applied to abstract asynchronous DAG-based distributed systems.
+
+#### [Fantom: A scalable framework for asynchronous distributed systems](https://arxiv.org/abs/1810.10360)
+Oct 22, 2018
+
+We describe \emph{Fantom}, a framework for asynchronous distributed systems. \emph{Fantom} is based on the Lachesis Protocol~\cite{lachesis01}, which uses asynchronous event transmission for practical Byzantine fault tolerance (pBFT) to create a leaderless, scalable, asynchronous Directed Acyclic Graph (DAG).
+We further optimize the \emph{Lachesis Protocol} by introducing a permission-less network for dynamic participation. Root selection cost is further optimized by the introduction of an n-row flag table, as well as optimizing path selection by introducing domination relationships.
+
+We propose an alternative framework for distributed ledgers, based on asynchronous partially ordered sets with logical time ordering instead of blockchains.
+
+This paper builds upon the original proposed family of \emph{Lachesis-class} consensus protocols. We formalize our proofs into a model that can be applied to abstract asynchronous distributed system.
+
+#### [OPERA: Reasoning about continuous common knowledge in asynchronous distributed systems](https://arxiv.org/abs/1810.02186)
+Oct 4, 2018
+
+his paper introduces a new family of consensus protocols, namely \emph{Lachesis-class} denoted by L, for distributed networks with guaranteed Byzantine fault tolerance. Each Lachesis protocol L in L has complete asynchrony, is leaderless, has no round robin, no proof-of-work, and has eventual consensus.
+
+The core concept of our technology is the \emph{OPERA chain}, generated by the Lachesis protocol. In the most general form, each node in Lachesis has a set of k neighbours of most preference. When receiving transactions a node creates and shares an event block with all neighbours. Each event block is signed by the hashes of the creating node and its k peers. The OPERA chain of the event blocks is a Directed Acyclic Graph (DAG); it guarantees practical Byzantine fault tolerance (pBFT). Our framework is then presented using Lamport timestamps and concurrent common knowledge.
+
+Further, we present an example of Lachesis consensus protocol L0 of our framework. Our L0 protocol can reach consensus upon 2/3 of all participants' agreement to an event block without any additional communication overhead. L0 protocol relies on a cost function to identify k peers and to generate the DAG-based OPERA chain. By creating a binary flag table that stores connection information and share information between blocks, Lachesis achieves consensus in fewer steps than pBFT protocol for consensus.
+
+
+
+
 

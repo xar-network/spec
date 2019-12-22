@@ -116,15 +116,15 @@ XAR Network's public chain allows you to deposit any supported digital asset, co
 
 ## Project Overview
 
-### **Project Name**
+### Project Name
 
 Xar Network
 
-### **Coin Name**
+### Coin Name
 
 CSDT (Collateralized Stable Debt Tokens)
 
-### **Official website**
+### Official website
 
 [Xar Network](https://xar.network/)
 

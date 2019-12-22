@@ -574,7 +574,7 @@ For this reason, specific debt limits have been chosen related to each proposed 
 
 ### Slashing
 
-Slashing are triggered by negative behavior events, there are two primary events
+Slashing is triggered by negative behavior events, there are two primary events
 
 * Downtime
 * Double-signing

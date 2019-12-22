@@ -59,6 +59,8 @@ XAR Network's public chain allows you to deposit any supported digital asset, co
   * [Current Market capitalization (at the time of writing)](#current-market-capitalization--at-the-time-of-writing-)
   * [Total coin supply](#total-coin-supply)
   * [Listed Exchanges](#listed-exchanges)
+  * [Bootstrapping](#bootstrapping)
+  * [Slashing](#slashing)
 - [Wallet](#wallet)
   * [ERC20](#erc20)
   * [Blockchain Explorer](#blockchain-explorer)

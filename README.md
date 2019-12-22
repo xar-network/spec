@@ -133,8 +133,7 @@ CSDT (Collateralized Stable Debt Tokens)
 *   Non-Inflationary, Stable, Sustainable Proof Of Stake
 *   Consolidated liquidity across DeFi offerings
 *   Decentralized, Stable, Unbiased currency that offers stable rewards
-
-The framework for Cosmos and Fantom-based decentralized finance.
+*   The framework for Cosmos and Fantom-based decentralized finance.
 
 ## Problem Statement
 

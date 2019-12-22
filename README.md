@@ -9,9 +9,9 @@ XAR Network’s public chain is a permissionless decentralized network with a fo
 XAR Network's public chain allows you to deposit any supported digital asset, collateralize it, mint Collateralized Stable Debt Tokens (CSCDs) based on this collateral, and then use these CSDTs to stake and earn rewards. All the while maintaining ownership of your underlying collateralized asset. Staking CSDT allows you to receive rewards from the fees pool, proportional to your share of the total CSDT stakes in the network. Your rewards are paid in a stable currency token, such as CSDT (collateralized stable debt/dollar/decentralized token), not in an inflationary token as in some other networks.
 
 - [Project Overview](#project-overview)
-  * [**Project Name**](#--project-name--)
-  * [**Coin Name**](#--coin-name--)
-  * [**Official website**](#--official-website--)
+  * [Project Name](#--project-name--)
+  * [Coin Name](#--coin-name--)
+  * [Official website](#--official-website--)
   * [Elevator Pitch](#elevator-pitch)
 - [Problem Statement](#problem-statement)
   * [Inflationary Staking](#inflationary-staking)

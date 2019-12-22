@@ -1,35 +1,141 @@
 # **Xar Network**
 
-The framework for consolidated decentralized finance.
+The framework for layer 1 consolidated decentralized finance.
 
 Xar Network was created from a need of corporate and central banks to use blockchain technology in a private, permissioned space. As our feature set grew we noticed consistent cross-over with the decentralized finance ecosystem, so eventually the Xar toolkit grew to a full-fledged decentralized finance toolbox. Xar Network offers access to advantages of both purely traditional banking systems and blockchain systems - using blockchain based or decentralized finance (DeFi).
 
 XAR Network’s public chain is a permissionless decentralized network with a focus on DeFi (decentralized finance). Based on Lachesis and the TxFlow protocol, Fantom Foundation's consensus mechanism allows high responsiveness with almost instantaneous full finality (~1.2 seconds), at very high transactional throughput (processing in excess of 20,000 transactions per second). As a result, Xar Network and our customized and localized chains can provide fully verifiable, transparent and truly decentralised validation of transactions in the real world - at an unprecedented speed.
 
-XAR Network's public chain allows you to deposit any supported digital asset, collateralize it, mint Collateralized Stable Debt Tokens (CSCDs) based on this collateral, and then use these CSDTs to stake and earn rewards. All the while maintaining ownership of your underlying collateralized asset. Staking CSDT allows you to receive rewards from the fees pool, proportional to your share of the total CSDT stakes in the network. Your rewards are paid in a stable currency token, such as CSDT (collateralized stable debt/dollar/decentralized token), not in an inflationary token as in some other networks.
+XAR Network's public chain allows you to deposit any supported digital asset, collateralize it, mint Collateralized Stable Debt Tokens (CSDTs) based on this collateral, and then use these CSDTs to stake and earn rewards. All the while maintaining ownership of your underlying collateralized asset. Staking CSDT allows you to receive rewards from the fees pool, proportional to your share of the total CSDT stakes in the network. Your rewards are paid in a stable currency token, such as CSDT (collateralized stable debt/dollar/decentralized token), not in an inflationary token as in some other networks.
+
+- [Project Overview](#project-overview)
+  * [Project Name](#--project-name--)
+  * [Coin Name](#--coin-name--)
+  * [Official website](#--official-website--)
+  * [Elevator Pitch](#elevator-pitch)
+- [Problem Statement](#problem-statement)
+  * [Inflationary Staking](#inflationary-staking)
+  * [Stable Staking Rewards](#stable-staking-rewards)
+  * [The role of tokens as network security](#the-role-of-tokens-as-network-security)
+  * [Staking security vs DeFi collateral](#staking-security-vs-defi-collateral)
+  * [Split fees and split collateral](#split-fees-and-split-collateral)
+- [Solution](#solution)
+  * [Collateralized Stable Debt Tokens](#collateralized-stable-debt-tokens)
+  * [Stable Staking](#stable-staking)
+  * [Non-Inflationary](#non-inflationary)
+  * [Shared Collateral and Fees](#shared-collateral-and-fees)
+  * [Maintaining CSDT value (Rebalancing explained)](#maintaining-csdt-value--rebalancing-explained-)
+- [Solution Summary](#solution-summary)
+- [Project Details](#project-details)
+  * [Feature Set](#feature-set)
+  * [Traditional Use Cases](#traditional-use-cases)
+  * [Supported Collateral](#supported-collateral)
+  * [Planned support](#planned-support)
+  * [Target Demographic (High Level)](#target-demographic--high-level-)
+  * [Long term vision](#long-term-vision)
+  * [Relevant milestones in the past and upcoming 24 months](#relevant-milestones-in-the-past-and-upcoming-24-months)
+  * [Necessity of a new native coin](#necessity-of-a-new-native-coin)
+  * [Project Competitors](#project-competitors)
+- [Product](#product)
+  * [Development status](#development-status)
+  * [Relevant product links](#relevant-product-links)
+  * [Open Source License](#open-source-license)
+  * [Github Repo link](#github-repo-link)
+- [Features of the coin (CSDT)](#features-of-the-coin--csdt-)
+  * [CSDT use cases](#csdt-use-cases)
+  * [Voting Rights via CSDT](#voting-rights-via-csdt)
+    + [Upgrade Proposal](#upgrade-proposal)
+    + [Param Change Proposal](#param-change-proposal)
+    + [Text Proposal](#text-proposal)
+    + [Voting Explained](#voting-explained)
+  * [Collateral Sustainable Stable Rewards (CSSR)](#collateral-sustainable-stable-rewards--cssr-)
+    + [Proof of Stake](#proof-of-stake)
+    + [Collateralized Stable Tokens](#collateralized-stable-tokens)
+    + [Liquidity based lending](#liquidity-based-lending)
+    + [Collateral Sustainable Stable Rewards](#collateral-sustainable-stable-rewards)
+  * [On-chain Fees](#on-chain-fees)
+  * [Simulated Staking Rewards](#simulated-staking-rewards)
+- [Token Economics](#token-economics)
+  * [Current Market capitalization (at the time of writing)](#current-market-capitalization--at-the-time-of-writing-)
+  * [Total coin supply](#total-coin-supply)
+  * [Listed Exchanges](#listed-exchanges)
+  * [Bootstrapping](#bootstrapping)
+  * [Slashing](#slashing)
+- [Wallet](#wallet)
+  * [ERC20](#erc20)
+  * [Blockchain Explorer](#blockchain-explorer)
+  * [Web Wallet](#web-wallet)
+  * [SDKs](#sdks)
+  * [Coin protocol](#coin-protocol)
+  * [Project team full nodes](#project-team-full-nodes)
+- [Technical Overview](#technical-overview)
+  * [Module Auction](#module-auction)
+  * [Module Lending / CSDT](#module-lending---csdt)
+  * [Module CSDT / Decentralized Stable Tokens](#module-csdt---decentralized-stable-tokens)
+  * [Module Escrow](#module-escrow)
+  * [Module Issue](#module-issue)
+  * [Module Liquidator](#module-liquidator)
+  * [Module Market](#module-market)
+  * [Module Order](#module-order)
+  * [Module NFT](#module-nft)
+  * [Module Oracle](#module-oracle)
+  * [Module Record (Proof of Existence)](#module-record--proof-of-existence-)
+  * [Module Coinswap](#module-coinswap)
+  * [Module Synthetic](#module-synthetic)
+  * [DEX Matching Engine](#dex-matching-engine)
+- [Xar FAQ](#xar-faq)
+- [Users](#users)
+  * [User Basics](#user-basics)
+    + [Q: How to create a wallet?](#q--how-to-create-a-wallet-)
+    + [Q: How to transfer funds from erc20/bep2 to Xar?](#q--how-to-transfer-funds-from-erc20-bep2-to-xar-)
+    + [Q: How to confirm that you received funds?](#q--how-to-confirm-that-you-received-funds-)
+  * [User CSDT](#user-csdt)
+    + [Q: What is CSDT and how does it work?](#q--what-is-csdt-and-how-does-it-work-)
+    + [Q: What is ucsdt and uftm?](#q--what-is-ucsdt-and-uftm-)
+    + [Q: How to mint ucsdt from uftm?](#q--how-to-mint-ucsdt-from-uftm-)
+    + [Q: How to calculate how much CSDT I can create?](#q--how-to-calculate-how-much-csdt-i-can-create-)
+  * [User Staking](#user-staking)
+    + [Q: How much staking rewards will I get?](#q--how-much-staking-rewards-will-i-get-)
+    + [Q: How much is currently staked?](#q--how-much-is-currently-staked-)
+- [Developers](#developers)
+    + [Q: Where can I find general resources?](#q--where-can-i-find-general-resources-)
+  * [Developer Blockchain](#developer-blockchain)
+    + [Q: How do I install Xar?](#q--how-do-i-install-xar-)
+    + [Q: How do I run a testnet?](#q--how-do-i-run-a-testnet-)
+  * [Developer JavaScript / NodeJS](#developer-javascript---nodejs)
+    + [Q: How can I interact with the chain?](#q--how-can-i-interact-with-the-chain-)
+    + [Q: Where can I find code samples?](#q--where-can-i-find-code-samples-)
+    + [Q: What functions are currently supported?](#q--what-functions-are-currently-supported-)
+  * [Developer Web / HTTPS](#developer-web---https)
+    + [Q: Is there an API I can interact with?](#q--is-there-an-api-i-can-interact-with-)
+    + [Q: Where can I find documentation in the API?](#q--where-can-i-find-documentation-in-the-api-)
+- [Validators](#validators)
+    + [Q: How do I install a Xar node?](#q--how-do-i-install-a-xar-node-)
+    + [Q: How do I join the mainnet?](#q--how-do-i-join-the-mainnet-)
+    + [Q: What should I know as a validator?](#q--what-should-i-know-as-a-validator-)
+    + [Q: What should I know about security as a validator?](#q--what-should-i-know-about-security-as-a-validator-)
+- [General](#general)
 
 ## Project Overview
 
-### **Project Name**
+### Project Name
 
 Xar Network
 
-### **Coin Name**
+### Coin Name
 
 CSDT (Collateralized Stable Debt Tokens)
 
-### **Official website**
+### Official website
 
 [Xar Network](https://xar.network/)
 
-### 
-**Elevator Pitch**
+### Elevator Pitch
 
 *   Non-Inflationary, Stable, Sustainable Proof Of Stake
 *   Consolidated liquidity across DeFi offerings
 *   Decentralized, Stable, Unbiased currency that offers stable rewards
-
-The framework for Cosmos and Fantom-based decentralized finance.
+*   The framework for Cosmos and Fantom-based decentralized finance.
 
 ## Problem Statement
 
@@ -40,7 +146,7 @@ The framework for Cosmos and Fantom-based decentralized finance.
 *   No shared fees between DeFi offerings
 *   No optimized liquidity provider between DeFi offerings
 
-### **Inflationary Staking**
+### Inflationary Staking
 
 More tokens are minted as reward for validators providing security to a network. This only works if you measure your rewards in the inflationary token, however server costs are measured in fiat, for the sake of simplicity, USD. When a token’s supply inflates, it normally suffers a direct inverse correlation with price. If you double supply, you would halve the price. So the net result for validators is often negative. Cost in USD-USD value of tokens received over time.
 
@@ -49,14 +155,14 @@ Inflationary models are also unsustainable as you can’t infinitely keep mintin
 _A sustainable staking solution would need non-inflationary rewards._
 
 
-### **Stable Staking Rewards**
+### Stable Staking Rewards
 
 As mentioned in the previous section, server costs are measured in USD, however rewards are in tokens, to offset this, you need to sell tokens, when a tokens price depreciates to the point where it no longer covers the opex expenses, you need to discontinue the service. For this reason, staking is mostly a very mutable solution where staking farms will move from one coin to the next to ensure maximized profit due to fluctuating prices.
 
 _A stable staking solution would need to pay rewards in a stable token._
 
 
-### **The role of tokens as network security**
+### The role of tokens as network security
 
 A token provides security for its network. If you have a public blockchain that tokenized real-estate. And let’s assume it has $200M worth of tokenized real-estate. However, the underlying token staking value is worth $2M. Then in a staking model, it would cost you ~$2M to attack an object of value equal to $200M. The value of the underlying securitized token is what protects the network and its assets. So the value of the underlying security assets, should exceed, or at least match, the value of the managed assets.
 
@@ -76,7 +182,6 @@ Each new DeFi solution competes with each other over fees, and collateral. Incre
 
 If collateral was shared across all DeFi solutions, then fees could be consolidated. This would lead to greater fees for the collateral provider, and lower rates for the borrower (to offset the current collateral & fee war)
 
-
 ## Solution
 
 To circumvent this, we designed a system that has;
@@ -90,7 +195,7 @@ To circumvent this, we designed a system that has;
 This was achieved via 2 popular DeFi mechanisms, over collateralization, and liquidity pool lending.
 
 
-### **Collateralized Stable Debt Tokens**
+### Collateralized Stable Debt Tokens
 
 Collateralized Stable Debt Tokens or CSDT are USD pegged stable tokens minted from provided collateral. This allows validators / delegators to provide collateral in any native supported asset (FTM/BTC/ETH/BNB on genesis), and mint CSDT. The collateralized ratio of each asset is set via governance and on genesis would be FTM 150%, BTC 150%, ETH 150%, BNB 150%
 
@@ -101,14 +206,14 @@ We deposit 100,000 FTM into our Collateralized Contract, the validators via thei
 An important disclaimer here, it is best practice to not mint the maximum allowed as this sets a very high liquidation price for your assets. The way the stability of the price is managed is via the liquidation of assets should the token price depreciate. In the above example, should FTM price fall to $0.18 the collateral FTM would be rebalanced and made available for auction at discount, so that another user could purchase the FTM for CSDT (raised CSDT is used to pay off partial debt). If however in the example above the collateral provider instead decided to mint 5,000 CSDT, then the liquidation price would be ~$0.10 and they have a lot more safety and room to manage their collateral.
 
 
-### **Stable Staking**
+### Stable Staking
 
 With CSDT created, we can now create a validator by staking CSDT. Rewards will be paid out in CSDT. Current rewards are set at 7% with a staked target of 67%. So if there is 1,00 CSDT minted, and 67 are staked the reward will be 7% annually. Should more than 67% be staked, this will decrease to 6% over time, and should less than 67% be staked, then this will grow to 30% over time.
 
 Since CSDT is USD pegged, it means that your returns are fixed against your operational costs.
 
 
-### **Non-Inflationary**
+### Non-Inflationary
 
 Now that there is a liquidity pool available of assets (via the Collateral Contracts) it means that users of the system can borrow assets. This is collateralized lending with the ratio set per supported asset. Additional assets over and above CSDT assets can be supported. 
 
@@ -141,7 +246,6 @@ This is why the chain can provide much higher staking rewards, and much lower bo
 
 Shared liquidity (cheaper rates) and consolidated fees (higher rewards)
 
-
 ### Maintaining CSDT value (Rebalancing explained)
 
 Let’s say you create a CSDT with 150% collateral of FTM and at a price of $0.0121. Your total collateral is $181 (15,000 FTM). You withdraw $100. Your “liquidation” price is $0.01.
@@ -169,9 +273,7 @@ Non inflationary, stable rewards
 
 For better Opex and reward management from a coin that won't devalue because of Inflationary supply
 
-
 ## Project Details
-
 
 ### Feature Set
 
@@ -211,8 +313,6 @@ Coins for Open Finance
 
 Tokenised Markets for Investment Banks
 
-
-
 *   Primary Debt & Equity Markets
     *   Issuance, Book Building, Auction, Interest Payment, and Term Renegotiations
 *   Secondary Debt & Equity Spot Markets
@@ -227,8 +327,6 @@ Tokenised Markets for Investment Banks
 
 Digital Currency for Central Banks
 
-
-
 *   Net Interbank Settlements
 *   Treasury Notes, Bills and Bonds Management
 *   Foreign Stable Token Exchange
@@ -238,21 +336,17 @@ Digital Currency for Central Banks
 
 Managing Debentures Issuing
 
-
-
 *   Debt tokenisation
 *   Debt modelling through capital and interest tokens
 *   IOI / book building
 *   Auction / sale processes
 *   Extension to support Equity Token issuance
 
-### 
-**Supported Collateral**
+### Supported Collateral
 
 *   FTM
 
-### 
-**Planned support***
+### Planned support
 
 *   BNB
 *   BTC
@@ -260,26 +354,16 @@ Managing Debentures Issuing
 
 *Governance dependent
 
-
-### 
-**Target Demographic (High Level)**
-
-
+### Target Demographic (High Level)
 
 *   Retail DeFi investors
 *   Central and corporate banks on the FinTech side
 
-### 
-**Long term vision**
-
+### Long term vision
 
 Grow on-chain AUM to ~$100MM, accomplishing this via competitive interest rates and higher APR yield. Stakers provide liquidity and security. We are also working with multiple Central and Corporate bank projects in 3 different geographic regions.
 
-
-### 
-**Relevant milestones in the past and upcoming 24 months**
-
-
+### Relevant milestones in the past and upcoming 24 months
 
 *   Feb 2019 Signed agreement with 1st Corporate Bank for application of [DLT technologies](https://www.blog.xar.network/the-case-for-bank-stable-coins/)
 *   Apr 2019 Partnership with Fantom Foundation as technology partner
@@ -300,15 +384,11 @@ Grow on-chain AUM to ~$100MM, accomplishing this via competitive interest rates 
 *   Apr 2020 [CBDC](https://www.blog.xar.network/central-bank-digital-currency/) MVP
 *   Sep 2020 CBDC Deployment
 
-### 
-**Necessity of a new native coin**
-
+### Necessity of a new native coin
 
 Premined tokens can't be used as they break the economics of stable, sustainable, non-inflationary staking. This rules out all current existing tokens. But we also did not want to do an ICO, or raise any funds, and so we incorporated popular and existing cryptocurrencies to provide them additional value and utility.
 
-
-### 
-**Project Competitors**
+### Project Competitors
 
 Crypto: MakerDAO, Uniswap, Compound, Synthetixs
 
@@ -318,41 +398,28 @@ Non-crypto: R3, Hyperledger
 
 Our suite has been built from the last 12 month journey we have had with multiple corporate and 1 central bank. The toolset is built around usability and ease-of-use, with existing solutions like R3, and Hyperleder, these tools and ecosystem components must still be built, we provide them pre-packaged, with regulatory compliance, and even licensing for CSDT as an investment vehicle.
 
+## Product
 
-## 
-**Product**
-
-
-### 
-**Development status**
+### Development status
 
 Mainnet was launched in Nov 2019
 
+### Relevant product links
 
-### 
-**Relevant product links**
+[Xar Explorer](https://explorer.xar.network/)  
+[Xar Wallet](https://wallet.xar.network/)  
 
-[Xar Explorer](https://explorer.xar.network/) [Xar Wallet](https://wallet.xar.network/)
-
-
-### 
-**Open Source License**
+### Open Source License
 
 Apache-2.0
 
-
-### 
-**Github Repo link**
+### Github Repo link
 
 [https://github.com/xar-network](https://github.com/xar-network)
 
-
 ## Features of the coin (CSDT)
 
-
 ### CSDT use cases
-
-
 
 *   Stable Staking / Delegating ~ Network Security
 *   Transaction fees (0.0025ucsdt / tx)
@@ -364,49 +431,39 @@ Apache-2.0
 *   Lending (Utilization % formulate to get interest fee)
 *   Stable payments
 
-
 ### Voting Rights via CSDT
 
 There are 3 kinds of proposals in Xar
-
-
 
 *   Upgrade proposal
 *   Param Change proposal
 *   Text Proposal
 
-
-#### **Upgrade Proposal**
+#### Upgrade Proposal
 
 An upgrade proposal is specific to validators, and allows validators to signal if they are ready to upgrade, if the majority of validators have confirmed they are ready to upgrade, a software upgrade can commence, this is a 1:1 voting relationship with 1 validator having 1 vote.
 
-
-#### **Param Change Proposal**
+#### Param Change Proposal
 
 Parameter change proposals allow updates to parameters. There are two classes of parameters, system parameters and feature parameters. System parameters include basic configurations, such as voting period, governance costs, CSDT inflation adjustments. For these changes, validators can vote, and all CSDT stake is registered as voting power, irrespective of the source of asset.
 
 Feature parameters include feature configuration, such as which assets are allowed to trade on the DEX, or coinswap modules, which synthetics can be minted and tracked, which collateral and at what ratio is collateral accepted to create CSDT. These changes are governed by the governance token.
 
-
-#### **Text Proposal**
+#### Text Proposal
 
 Text proposals are generic or signalling proposals that allow participants to communicate with other validators or governance token holders, this allows to pre-empt upgrades, software changes, or just allows the community to vote on future features, or ecosystem changes that could effect the system. These changes are governed by full delegated stake.
 
-
-#### **Voting Explained**
+#### Voting Explained
 
 One a proposal has been created and has entered into the voting period. Governance token holders can participate. To vote, you have to have delegated stake. If you have delegated stake, you can vote on a proposal by simply submitting yes or no on a given proposal. This is currently available through the xarcli
-
 
 ```
 xarcli tx gov vote <proposal-id> <yes|no> --from <key> --chain-id xar-chain-dora-2
 ```
 
-
 This is also available via the REST interfaces, or Javascript SDK.
 
 If a delegator does not vote, they inherit their validators vote. If a validator voted first, a delegator can still override this vote, by submitting a new vote.
-
 
 ### Collateral Sustainable Stable Rewards (CSSR)
 
@@ -414,37 +471,31 @@ Blockchains need to bootstrap their networks. To achieve this, they create infla
 
 CSSR is a mechanism to expedite this and increase rewards for participation in securing the network. In order to understand this, we need to first look at a few traditional models.
 
-
 #### Proof of Stake
 
 You put collateral (stake) to vouch that you are a non malicious actor and are willing to be slashed (lose stake) should you act maliciously. For doing this, you are rewarded in inflationary stake (the same coin you staked)
 
-
-#### **Collateralized Stable Tokens**
+#### Collateralized Stable Tokens
 
 The most well known is SAI/DAI by MakerDAO, the concept is as follows;
 
 Users provide collateral (~stake), that collateral is worth an amount of USD (if my collateral is 1 ETH and 1 ETH is worth $200, then my collateral (read stake) is $200). For providing this stake you can mint SAI up to the value of the collateralization ratio. If ETH is 100%, then you can mint $200 worth of SAI
 
-
-#### **Liquidity based lending**
+#### Liquidity based lending
 
 The most well known protocol is Compound, the concept is as follows;
 
 Users provide collateral (~stake), that collateral is worth an amount of USD (if my collateral is 1 ETH and 1 ETH is worth $200, then my collateral (read stake) is $200 - Yes, this is the exact same sentence as above). For providing this stake, I can borrow other assets that other users staked. I would like to borrow BTC, and I can borrow 0.02 BTC if BTC was $10,000 and my collateral ratio was 100%
 
-
-#### **Collateral Sustainable Stable Rewards**
+#### Collateral Sustainable Stable Rewards
 
 So what if we put all the above together? What if you could provide stake, that you could earn borrower interest on, while using this to secure the network, and receive rewards in a stable token?
 
 CSSR allows you to take any supported asset, collateralize it, mint Collateralized Stable Debt Tokens (CSDT) from the collateral, and then use this CSDT to stake. Staking allows you access to the fees pool proportional to all stakers.
 
-
 ### On-chain Fees
 
 The system has quite a few fees, so we will go through the straight forward ones first (all fees are controlled via on-chain parameter governance);
-
 
 *   Rebalancing fee (30% of debt raised), rebalancing fees occur when a CSDT position is liquidated because it is under collateralized. The system takes a percentage of the CSDT raised on the auction and deposits it into the distribution module.
 *   Stability fee (2% configured via governance), the stability fee is the base cost to borrow or mint new assets in the system, this percentage is a yearly amount
@@ -490,79 +541,81 @@ Monthly fees: $19,815.47
 Yearly fees: $237,785.64  
 **Yearly APR: 19.62%**  
 
-## 
-**Token Economics**
+## Token Economics
 
-
-### 
-**Current Market capitalization (**at the time** of writing)**
+### Current Market capitalization (at the time of writing)
 
 [$541,909.91](https://wallet.xar.network/)
 
-
-### 
-**Total coin supply**
+### Total coin supply
 
 Debt limit of $25,000,000
 
-
-### 
-**Listed Exchanges**
+### Listed Exchanges
 
 None
 
+### Bootstrapping
 
-## 
-**Wallet**
+As proposed the system will gain equilibrium when it fulfills two requirements;
 
+* On-chain assets (collateral)
+* On-chain volume (DeFi modules)
 
-### 
-**Is the coin ERC 20 compliant?**
+It is unlikely that these will be sufficient for the first year after the launch of the chain, for that purpose the distribution modules can act as a Special Purpose Vehicle (SPV) that accepts donations and provides these donations via a bonded yield ratio. This ratio is currently set at a minimum of 6% and a maximum of 30%. Should there be enough donation rewards or community rewards, these will be distributed to offset the initial lack of liquidity and volume.
+
+Donations are simply transferred to the distribution address and the normal delegation distribution takes care of the validator and delegator distribution ratio.
+
+The ratio of yield is dependent on the target bonded percentage. Currently set to 67%. If the amount of CSDT staked is less than 67% the yield number will increase to the maximum of 30%, should it be greater than 67% this number will decrease to 6%.
+
+The first years interest will be donated by Xar to a maximum of $1,500,000.00
+
+For this reason, specific debt limits have been chosen related to each proposed collateral. With the current debt limits set to $500,000.00 per asset.
+
+### Slashing
+
+Slashing is triggered by negative behavior events, there are two primary events
+
+* Downtime
+* Double-signing
+
+If a validator fails to sign at least 500 blocks in a 10,000 block period, they will be slashed and jailed. The slashing penalty is 0.1%.
+
+If a validator double signs a transaction (double spend) they will be slashed and jailed. The double sign penalty is 5%.
+
+These penalties are applied to the full validator stake, including delegations.
+
+## Wallet
+
+### ERC20
 
 No
 
-
-### 
-**Blockchain Explorer**
-
-
+### Blockchain Explorer
 
 *   [Xar Explorer](https://explorer.xar.network/)
 
-
 ### Web Wallet
-
-
 
 *   [Xar Portal](https://portal.xar.network/)
 *   [Xar Wallet](https://wallet.xar.network/)
 
-
 ### SDKs
-
-
 
 *   [Javascript SDK](https://www.npmjs.com/package/@xar-network/javascript-sdk)
 *   [GO SDK](https://github.com/xar-network/go-sdk)
 
-### 
-**Coin protocol**
-
+### Coin protocol
 
 Xar is a custom toolchain built on top of the Cosmos SDK which is integrated into Fantom TxFlow & Fantom Lachesis Consensus
 
-
-### 
-**Project team full nodes**
+### Project team full nodes
 
 There are 3 nodes under management;
-
-
 
 *   Fantom Foundation ~ Capped at $30k CSDT minted
 *   Xar Enterprise ~ Capped at $30k CSDT minted
 *   Xar Network ~ Capped at $30k CSDT minted
-
 
 ## Technical Overview
 
@@ -570,13 +623,11 @@ The following is the high level and technical description of the designed module
 
 The following contains full technical specifications, below this will be a user friendly summary of each;
 
-
-
 *   [Xar Network - Auction](https://github.com/xar-network/spec/blob/master/auction.md)
 *   [Xar Network - CSDT](https://github.com/xar-network/spec/blob/master/csdt.md)
 *   [Xar Network - Denominations](https://github.com/xar-network/spec/blob/master/denominations.md)
 *   [Xar Network - Issue](https://github.com/xar-network/spec/blob/master/issue.md)
-*   [Xar Network - liquidator](https://github.com/xar-network/spec/blob/master/liquidator.md)
+*   [Xar Network - Liquidator](https://github.com/xar-network/spec/blob/master/liquidator.md)
 *   [Xar Network - Market](https://github.com/xar-network/spec/blob/master/market.md)
 *   [Xar Network - NFT](https://github.com/xar-network/spec/blob/master/nft.md)
 *   [Xar Network - Oracle](https://github.com/xar-network/spec/blob/master/oracle.md)
@@ -587,12 +638,11 @@ The following contains full technical specifications, below this will be a user 
 *   [Xar Network - Message Types](https://github.com/xar-network/spec/blob/master/types.md)
 *   [Xar Network - JSON format](https://github.com/xar-network/spec/blob/master/openapi.md)
 
-
 ### Module Auction
 
+[Full Specification](https://github.com/xar-network/spec/blob/master/auction.md)
+
 Generic module for creating auctions and allowing users to place bids until a timeout is reached
-
-
 
 *   StartForwardAuction starts a normal auction. Known as flap in Maker.
 *   StartReverseAuction starts an auction where sellers compete by offering decreasing prices. Known as flop in Maker.
@@ -602,25 +652,20 @@ Generic module for creating auctions and allowing users to place bids until a ti
 
 **Use Cases**
 
-
-
 *   Auctions (NFT)
 *   CSDT rebalancing auctions
 
-
 ### Module Lending / CSDT
+
+[Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
 
 Collateral lending module based on borrowing from liquidity pools and paying liquidity providers with interest.
 
 Users provide liquidity to liquidity pools. This liquidity also acts as collateral. If the user does not borrow against the collateral they receive interest. Interest is calculated based on liquidity to borrowing ratio. The less liquidity available for borrowers the higher the interest rates. Interest is split between all liquidity providers for a given asset. So borrowing interest rates will be higher than liquidity provider interest received.
 
-
-
 *   DepositFundFromAddress allows the user to deposit any denom they own as liquidity / collateral
 
 Price values are set in CSDT (explained below, for simplicity sake this is a USD pegged stable coin). Each denom has a set collateral ratio. Assuming BNB at 150%, means you have to provide $1.5 worth of BNB to borrow $1 worth of ETH. It is recommended to over collateralize to avoid liquidation.
-
-
 
 *   WithdrawFundToAddress allows the user to take the specified amount from the pool and store into the given account balance as long as they have sufficient collateral.
 
@@ -630,12 +675,11 @@ DistributeReward distributes the given reward between all the funders
 
 **Use cases**
 
-
-
 *   Decentralized collateralized lending, required for decentralized shorting solutions
 
-
 ### Module CSDT / Decentralized Stable Tokens
+
+[Full Specification](https://github.com/xar-network/spec/blob/master/csdt.md)
 
 Collateralized Stable Debt Tokens (CSDT) that are asset pegged (asset is USD, but can any other asset, BNB for example).
 
@@ -657,12 +701,9 @@ Debt Limits, Collateral assets accepted, and collateralized ratio can all be con
 
 **Use Cases**
 
-
-
 *   Multi asset staking tokens
 *   Collateralized debt (NFT or other)
 *   Can collateralized debt into collateralized debt (CDO)
-
 
 ### Module Escrow
 
@@ -676,21 +717,18 @@ Users can create lock boxes to deposit denoms into, these boxes have set conditi
 
 **Use Cases**
 
-
-
 *   Escrow
 *   Futures
 *   Forwards
 *   Options
 
-
 ### Module Issue
+
+[Full Specification](https://github.com/xar-network/spec/blob/master/issue.md)
 
 Allows for the creation of ERC20 standard mapped token issuance with fixed (governance controlled) creation and management fees.
 
 CreateToken allows the creation of a token, the denom itself is not reserved for the symbol, but instead an incrementing ID prefixed, for example bnb128e12c while the metadata preserves the symbol, for example FTM
-
-
 
 *   Mint allows mintable tokens to be minted, only if the token is created as a mintable asset
 *   BurnOwner allows the owner to burn tokens they hold
@@ -704,8 +742,6 @@ CreateToken allows the creation of a token, the denom itself is not reserved for
 
 Parameters per token are as follows;
 
-
-
 *   Name
 *   Symbol
 *   TotalSupply
@@ -718,8 +754,6 @@ Parameters per token are as follows;
 
 Global parameters (set via governance) are as follows;
 
-
-
 *   CreateFee
 *   MintFee
 *   FreezeFee
@@ -728,12 +762,11 @@ Global parameters (set via governance) are as follows;
 *   TransferOwnerFee
 *   DescribeFee
 
-
 ### Module Liquidator
 
+[Full Specification](https://github.com/xar-network/spec/blob/master/liquidator.md)
+
 The liquidator module settles bad debt from undercollateralized CSDT’s by seizing them and raising funds through auctions.
-
-
 
 *   SeizeAndStartCollateralAuction pulls collateral out of a CSDT and sells it in an auction for CSDT. Excess collateral is goes back to the contract
 *   StartDebtAuction sells off minted gov (native) tokens to raise set amount of stable coin (if collateral needs to be bought to keep the price of CSDT stable)
@@ -741,8 +774,9 @@ The liquidator module settles bad debt from undercollateralized CSDT’s by seiz
 
 Global parameters allows governance to set max auction debt sizes for removed collateral (to ensure smaller lots for bidding)
 
-
 ### Module Market
+
+[Full Specification](https://github.com/xar-network/spec/blob/master/market.md)
 
 The market module creates new markets on the DEX, and allows the Order module to trade against.
 
@@ -750,30 +784,27 @@ Global parameters via governance set the acceptable markets for DEX trading
 
 **Use cases**
 
-
-
 *   Trading
 *   Swaps
 *   Liquidity
 
-
 ### Module Order
 
+[Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
+
 Order module allows user to place BID and ASKS on the Market module
-
-
 
 *   PlaceBid places a BID or ASK in the given market ID
 *   CancelBID cancels a BID with a given BID ID
 
 **Use cases**
 
-
-
 *   Trading
 
 
 ### Module NFT
+
+[Full Specification](https://github.com/xar-network/spec/blob/master/nft.md)
 
 Allows for the creation of Non Fungible Token collections and Non Fungible Tokens (NFTs)
 
@@ -781,17 +812,14 @@ MintNFT creates a new NFT object with a collection and owner(s)
 
 **Use cases**
 
-
-
 *   Debt Issuance
 *   Debentures
 
-
 ### Module Oracle
 
+[Full Specification](https://github.com/xar-network/spec/blob/master/oracle.md)
+
 Allows a group of white-listed oracles to post price information of specific assets that are tracked by the protocol.
-
-
 
 *   AddOracle allows governance to add additional white-listed oracles
 *   AddAsset adds an asset to track it’s price / value
@@ -799,30 +827,26 @@ Allows a group of white-listed oracles to post price information of specific ass
 
 After each block all submitted prices are aggregated and a median (weighted by stake) value is created as the current price.
 
-
 ### Module Record (Proof of Existence)
 
+[Full Specification](https://github.com/xar-network/spec/blob/master/record.md)
+
 Allows the creation of proof as an immutable record. 
-
-
 
 *   CreateRecord creates a record set, for example University Certificates
 *   AddRecord allows the storing of a record with metadata. Such as a unique certificate
 
 **Use cases**
 
-
-
 *   Luxury good proofs
 *   Certification proofs
 *   Anti fraud mechanism
 
-
 ### Module Coinswap
 
+[Full Specification](https://github.com/xar-network/spec/blob/master/coinswap.md)
+
 Generic system coinswap protocol. Users can provide liquidity and set pool based swap ratios.
-
-
 
 *   AddLiquidity allows a user to add liquidity to a pool. User can specify the token they wish to swap for.
 *   Swap allows a user to swap from a liquidity pool for the swap requested asset for the counter pool.
@@ -831,12 +855,11 @@ This allows swaps based on liquidity ratio in the pool, so if the pool is 100:1 
 
 Supported swap markets are controlled via governance.
 
-
 ### Module Synthetic
 
+[Full Specification](https://github.com/xar-network/spec/blob/master/synthetic.md)
+
 Allows the minting, selling, and buying of synthetic assets. Supported assets are controlled via governance.
-
-
 
 *   MintSynthetic allows the creation of synthetics to allow shorting
 *   BuySynthetic allows buying of synthetic assets
@@ -846,11 +869,8 @@ All available assets are controlled via governance
 
 **Use cases**
 
-
-
 *   No liquidity limits trading
 *   Shorting mechanisms
-
 
 ### DEX Matching Engine
 
@@ -1436,4 +1456,75 @@ Order 6 would match with order 5 for price 11.5 and quantity 42
 Order 8 would match with order 5 for price 11.5 and quantity 32 and order 7 for price 11.5 and quantity 50
 
 
-<!-- Docs to Markdown version 1.0β17 -->
+## Xar FAQ
+
+- [Users](#users)  
+- [User Basics](#user-basics)  
+- [User CSDT](#user-csdt)  
+- [User Auctions](#user-auctions)  
+- [User Trading](#user-trading)  
+- [User Lending](#user-lending)  
+- [User Liquidity Pools](#user-liquidity-pools)  
+- [User Issuing Tokens](#user-issuing-tokens)  
+- [User Issuing NFTs](#user-issuing-nfts)  
+- [User Record Proofs](#user-record-proofs)  
+- [Developers](#developers)  
+- [Developer Blockchain](#developer-blockchain)  
+- [Developer JavaScript / NodeJS](#developer-javascript--nodejs)  
+- [Developer Web / HTTPS](#developer-web--https)  
+- [Validators](#validators)  
+- [General](#general)  
+## Users
+### User Basics
+#### Q: How to create a wallet?
+Can currently be done via the [CLI]( https://xar-network.github.io/xar-network/installation.html), [javascript-sdk]( https://www.npmjs.com/package/@xar-network/javascript-sdk), [Xar Wallet](https://wallet.xar.network) (non custodial), or [Xar Portal](https://portal.xar.network) (custodial)
+#### Q: How to transfer funds from erc20/bep2 to Xar?
+[Fantom Bridge](https://bnbridge.exchange)
+#### Q: How to confirm that you received funds?
+[Xar Explorer](https://explorer.xar.network)
+### User CSDT
+#### Q: What is CSDT and how does it work?
+[Xar Network staking explained](https://www.blog.xar.network/xar-network-staking-explained/)
+#### Q: What is ucsdt and uftm?
+USD and FTM 1:1,000,000 so 1FTM = 1,000,000uftm
+#### Q: How to mint ucsdt from uftm?
+You can mint, via the [CLI]( https://xar-network.github.io/xar-network/installation.html), [javascript-sdk]( https://www.npmjs.com/package/@xar-network/javascript-sdk), [Xar Wallet](https://wallet.xar.network), or [Xar Portal](https://portal.xar.network)
+#### Q: How to calculate how much CSDT I can create?
+[Xar Wallet](https://wallet.xar.network) has a calculator
+### User Staking
+#### Q: How much staking rewards will I get?
+[Xar Wallet](https://wallet.xar.network) has a calculator
+#### Q: How much is currently staked?
+[Xar Wallet](https://wallet.xar.network) shows the current staked data, you can also view validators on [Xar Explorer](https://explorer.xar.network)
+## Developers
+#### Q: Where can I find general resources?
+[Xar Resources]( https://xar-network.github.io/awesome/)
+### Developer Blockchain
+#### Q: How do I install Xar?
+[Installing the Xar application]( https://xar-network.github.io/xar-network/installation.html)
+#### Q: How do I run a testnet?
+[Setup your own Xar testnet]( https://xar-network.github.io/xar-network/deploy-testnet.html)
+### Developer JavaScript / NodeJS
+#### Q: How can I interact with the chain?
+[JavaScript-SDK]( https://www.npmjs.com/package/@xar-network/javascript-sdk)
+#### Q: Where can I find code samples?
+[JavaScript Examples]( https://xar-network.github.io/examples/)
+#### Q: What functions are currently supported?
+[Function coverage]( https://github.com/xar-network/javascript-sdk/blob/master/__tests__/client.test.js)
+### Developer Web / HTTPS
+#### Q: Is there an API I can interact with?
+[Node REST API](https://node.xar.network)
+#### Q: Where can I find documentation in the API?
+[Xar Network REST API](https://docs.xar.network)
+## Validators
+#### Q: How do I install a Xar node?
+[Installing the Xar Node]( https://xar-network.github.io/xar-network/)
+#### Q: How do I join the mainnet?
+[Joining the mainnet]( https://xar-network.github.io/xar-network/join-mainnet.html)
+#### Q: What should I know as a validator?
+[Validators Overview]( https://xar-network.github.io/xar-network/validators/overview.html)
+#### Q: What should I know about security as a validator?
+[Validators Security]( https://xar-network.github.io/xar-network/validators/security.html)
+## General
+The [Xar blog](https://www.blog.xar.network/) is also a good source of information
+

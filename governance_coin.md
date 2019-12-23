@@ -1,4 +1,4 @@
-## Features of the governance coin
+## Features of the Governance Coin
 
 The Xar layer 1 DeFi protocol was designed with custom configuration in mind and allows for a secondary, governance token to be leveraged for most system functionalities.
 

@@ -8,7 +8,7 @@ If however, stable staking is not required, and instead an inflationary coin is 
 
 ### Stable Staking Governance Coin Use Cases
 
-* Primary collateral source (gov coin can be set with the highest debt limit and the lowest collateral ratio)
+* Primary collateral source (gov coin can be set with the highest debt limit and the lowest collateral ratio - overall system volatility risk)
 * Transaction fees (default 0.0025gov)
 * Borrowing interest can be repaid in the governance coin (accrued in native asset, repaid by gov coin)
 * DEX market pairs (all pairs quoted in pair/gov, default fees 0.3%)

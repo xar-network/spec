@@ -25,5 +25,6 @@ If however, stable staking is not required, and instead an inflationary coin is 
 * DEX market pairs (all pairs quoted in pair/gov, default fees 0.3%)
 * Coinswap liquidity pairs (all pairs denominated in gov, default fees 0.3%)
 * Governance proposals (fixed value, example 100gov)
+* All governance voting (all votes counted in governance token only)
 * Synthetic denominated value (all trades denominated in gov token, buy with gov token, sell to gov token, fees in gov token ~0.3% - 3%)
 * Slashing (0.0001% for downtime, 5% for double signing)

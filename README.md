@@ -1,6 +1,6 @@
 # **Xar - crypto agnostic defi**
 
-The framework for layer 1 consolidated crypto agnostic decentralized finance.
+The layer 1 crypto agnostic decentralized finance platform.
 
 Xar Network was created from a need of corporate and central banks to use blockchain technology in a private, permissioned space. As our feature set grew we noticed consistent cross-over with the decentralized finance ecosystem, so eventually the Xar toolkit grew to a full-fledged decentralized finance toolbox. Xar Network offers access to advantages of both purely traditional banking systems and blockchain systems - using blockchain based or decentralized finance (DeFi).
 
